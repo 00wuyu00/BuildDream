@@ -122,7 +122,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'User',
     'Competition',
-    'Complex',
     'New',
     'Project',
     'Question',
