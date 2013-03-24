@@ -2,4 +2,5 @@ eclipse.preferences.version=1
 encoding//Competition/models.py=utf-8
 encoding//New/models.py=utf-8
 encoding//Project/models.py=utf-8
+encoding//Question/models.py=utf-8
 encoding//User/models.py=utf-8

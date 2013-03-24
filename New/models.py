@@ -5,20 +5,22 @@ from django.db import models
 
 class New(models.Model):
     title=models.CharField(max_length=99)
-    time=models.DateTimeField()
+    time=models.DateTimeField(auto_now_add=True)
     content=models.CharField(max_length=999)
     author=models.CharField(max_length=10)
-    times=models.IntegerField()
+    times=models.IntegerField(default=0)
 
-class Image(models.Model):
-    description=models.CharField(max_length=999)
+class NewImage(models.Model):
+    description=models.CharField(max_length=999,blank=True)
     address=models.FilePathField()
-    flag=models.BooleanField()#是否为标志
+    flag=models.BooleanField(default=False)#是否为标志
+    new=models.ForeignKey(New)
 
-class Case(models.Model):
+class NewCase(models.Model):
     time=models.DateTimeField()#事件发生时间
     description=models.CharField(max_length=999)#事件描述
-    level=models.SmallIntegerField()#事件严重等级
+    level=models.SmallIntegerField(default=0)#事件严重等级
+    new=models.ForeignKey(New)
 
 
 
